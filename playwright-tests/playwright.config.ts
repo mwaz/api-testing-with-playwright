@@ -4,7 +4,7 @@ export default defineConfig({
   globalSetup: require.resolve("./global.setup"),
   use: {
     // All API requests will be prefixed with this baseURL
-    baseURL: "http://localhost:3000",
+    baseURL: "https://api-testing-with-playwright-b1gd.vercel.app",
     storageState: "./userAuth.json",
     extraHTTPHeaders: {
       // We can add headers that are common for all requests.
