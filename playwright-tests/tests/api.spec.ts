@@ -1,11 +1,11 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test.describe('Users API', () => {
+test.describe("Users API", () => {
   // Test to get all users
-  test('should be able to get a list of users', async ({ request }) => {
-    const response = await request.get('/api/users');
+  test("should be able to get a list of users", async ({ request }) => {
+    const response = await request.get("/api/users");
 
-    console.log(response.url());
+    console.log(`Test Url: ${response.url()}`);
 
     // Assert that the request was successful
     expect(response.ok()).toBeTruthy();
@@ -16,13 +16,13 @@ test.describe('Users API', () => {
   });
 
   // Test to create a new user
-  test('should be able to create a new user', async ({ request }) => {
+  test("should be able to create a new user", async ({ request }) => {
     const newUser = {
-      name: 'John Doe',
+      name: "John Doe",
       email: `john.doe.${Date.now()}@example.com`,
     };
 
-    const response = await request.post('/api/users', {
+    const response = await request.post("/api/users", {
       data: newUser,
     });
 
