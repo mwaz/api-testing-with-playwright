@@ -5,7 +5,7 @@ jobs:
   build:
     docker:
       - image: mcr.microsoft.com/playwright:v1.52.0-jammy
-    working_directory: ~/repo/playwright-tests
+    working_directory: ~/repo
     steps:
       - checkout
       # Download and cache dependencies
@@ -15,8 +15,8 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: cd ~/repo/playwright-tests && npm install
-      - run: cd ~/repo/playwright-tests && npm run test
+      - run: cd playwright-tests && npm install
+      - run: cd playwright-tests && npm run test
 
       - store_artifacts:
           path: ./playwright-report
