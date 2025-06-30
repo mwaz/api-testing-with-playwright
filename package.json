@@ -1,0 +1,21 @@
+{
+  "name": "api-testing-with-playwright",
+  "version": "1.0.0",
+  "description": "A simple Express API for the Playwright API testing tutorial.",
+  "main": "server.js",
+  "scripts": {
+    "test": "",
+    "build": "node index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "waweru",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
