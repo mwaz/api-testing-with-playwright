@@ -16,6 +16,7 @@ jobs:
             - v1-dependencies-
 
       - run: cd playwright-tests && npm install
+      - run: cd playwright-tests && npx playwright install
       - run: cd playwright-tests && npm run test
 
       - store_artifacts:
