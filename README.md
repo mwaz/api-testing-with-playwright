@@ -1,6 +1,10 @@
-# Playwright Test API Server
+# Playwright Test API
 
-This project is a simple API server built with `Node.js` and `Express`. It is designed to be a testing backend for the "A guide to API testing with Playwright and CircleCI" tutorial.
+[![CircleCI](https://circleci.com/gh/mwaz/api-testing-with-playwright.svg?style=svg)](https://circleci.com/gh/mwaz/api-testing-with-playwright)
+
+<p align="center"><img src="https://avatars3.githubusercontent.com/u/59034516"></p>
+
+This project is a simple API server built with `Node.js` and `Express`. It is designed to be a testing backend for the "API testing with Playwright" tutorial for CircleCI.
 
 It provides basic endpoints for fetching users, creating users, and simulating a user login.
 
@@ -12,7 +16,7 @@ It provides basic endpoints for fetching users, creating users, and simulating a
 
 ## Installation
 
-Clone the repository or save the `server.js` and `package.json` files to a new directory.
+Clone the repository or save the `index.js` and `package.json` files to a new directory.
 
 ```bash
 git clone git@github.com:mwaz/api-testing-with-playwright.git
@@ -40,7 +44,9 @@ npm start
 You should see a confirmation message in your terminal:
 Test API server is running on <http://localhost:3000>
 
-Available API Endpoints: 
+> **Info:** The API server is also hosted on Vercel at [https://api-testing-with-playwright-b1gd.vercel.app](https://api-testing-with-playwright-b1gd.vercel.app), which makes it easier to run the tests on CI.
+
+Available API Endpoints:
 The server provides the following endpoints:
 
 ### Authentication
@@ -69,7 +75,7 @@ Users
 ]
 ```
 
-`POST /users`
+`POST api/users`
 
 Creates a new user.
 
@@ -80,3 +86,18 @@ Creates a new user.
 - `{ "id": 3, "name": "John Doe", "email": "john.doe@example.com" }`
 
 - Error Response (400): `{ "message": "Name and email are required." }`.
+
+## Details
+
+This repo is built following a tutorial published on CircleCI blog under the CircleCI Guest Writer Program.
+
+- Blog post: [API Testing With Playwright][blog]
+- Author's GitHub profile: [Waweru Mwaura][author]
+
+### About CircleCI Guest Writer Program
+
+Join a team of freelance writers and write about your favorite technology topics for the CircleCI blog. Read more about the program [here][gwp-program].
+
+[blog]: https://circleci.com/blog/api-testing-with-playwright
+[author]: https://github.com/mwaz
+[gwp-program]: https://circle.ci/3ahQxfu
