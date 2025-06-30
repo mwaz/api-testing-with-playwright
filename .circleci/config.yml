@@ -15,8 +15,8 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm install
-      - run: npm run test
+      - run: cd ~/repo/playwright-tests && npm install
+      - run: cd ~/repo/playwright-tests && npm run test
 
       - store_artifacts:
           path: ./playwright-report
