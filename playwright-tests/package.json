@@ -1,0 +1,18 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "Playwright API testing example with Express server.",
+  "main": "",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui"
+  },
+  "keywords": [],
+  "author": "waweru",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {},
+  "devDependencies": {
+    "@playwright/test": "^1.53.1"
+  }
+}
